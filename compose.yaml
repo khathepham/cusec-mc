@@ -18,7 +18,7 @@ services:
       - cf_api_key
     volumes:
       - "./data:/data"
-
+      
 secrets:
   cf_api_key:
-    file: ./curseforge_api_key.txt
+    file: /curseforge_api_key.txt
