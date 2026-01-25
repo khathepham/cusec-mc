@@ -13,6 +13,8 @@ services:
       TZ: "America/Toronto"
       CF_API_KEY_FILE: /run/secrets/cf_api_key
       VERSION: "1.21.11"
+      OPS: |-
+        Marshmallows7920
       SPIGET_RESOURCES: |-
         29999
         9089
