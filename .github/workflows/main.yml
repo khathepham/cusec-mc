@@ -3,8 +3,11 @@ name: Validate-YAML
 on: 
   push:
     branches: [ main ]
+    paths: compose.yaml
   pull_request:
     branches: [ main ]
+    paths: compose.yaml
+  
 
 jobs:
   validate-yaml:
