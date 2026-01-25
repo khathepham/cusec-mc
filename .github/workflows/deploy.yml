@@ -4,6 +4,7 @@ on:
     branches: [ main ]
     paths: 
       - compose.yaml
+  workflow_dispatch: 
 
 jobs:
   deploy-webhook:
@@ -12,11 +13,16 @@ jobs:
     steps:
       - name: Call Deploy Webhook
         id: deploy-api
-        uses: muhfaris/request-action@v1
+        uses: tyrrrz/action-http-request@master
         with:
           url: ${{ secrets.DEPLOYMENT_WEBHOOK }}
           method: POST
+          headers:
+          body: '{}'
+          retry-count: 3
+          retry-delay: 500
       
-      - name: Show API Response Status
+      - name: Print outputs
         run: |
-          echo "Response Status: ${{ steps.deploy-api.outputs.response-status }}"
+          echo "Status: ${{ steps.deploy-api.outputs.status }}"
+          echo "Success: ${{ steps.deploy-api.outputs.success }}"
