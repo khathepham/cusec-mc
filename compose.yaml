@@ -21,6 +21,8 @@ services:
       - cf_api_key
     volumes:
       - "/cusec-mc/data:/data"
+      - "/cusec-mc/plugins:/plugins"
+      - "/cusec-mc/mods:/mods"
 
 secrets:
   cf_api_key:
