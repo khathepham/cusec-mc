@@ -11,9 +11,11 @@ services:
       EULA: "TRUE"
       TYPE: "FABRIC"
       TZ: "America/Toronto"
+      CF_API_KEY_FILE: /run/secrets/cf_api_key
       CURSEFORGE_FILES: |-
         xaeros-minimap
-      CF_API_KEY_FILE: /run/secrets/cf_api_key
+      MODRINTH_PROJECTS: |-
+        fabric-api
     secrets:
       - cf_api_key
     volumes:
