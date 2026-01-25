@@ -12,6 +12,7 @@ services:
       TYPE: "FABRIC"
       TZ: "America/Toronto"
       CF_API_KEY_FILE: /run/secrets/cf_api_key
+      VERSION: "1.21.11"
       # CURSEFORGE_FILES: |-
       #   xaeros-minimap
       # MODRINTH_PROJECTS: |-
@@ -20,7 +21,7 @@ services:
       - cf_api_key
     volumes:
       - "./data:/data"
-      
+
 secrets:
   cf_api_key:
     file: /curseforge_api_key.txt
