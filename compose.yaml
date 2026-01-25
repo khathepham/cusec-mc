@@ -11,8 +11,14 @@ services:
       EULA: "TRUE"
       TYPE: "FABRIC"
       TZ: "America/Toronto"
-      CF_API_KEY: "${CURSEFORGE_API}"
       CURSEFORGE_FILES: |-
         xaeros-minimap
+      CF_API_KEY_FILE: /run/secrets/cf_api_key
+    secrets:
+      - cf_api_key
     volumes:
       - "./data:/data"
+
+secrets:
+  cf_api_key:
+    file: ./curseforge_api_key.txt
