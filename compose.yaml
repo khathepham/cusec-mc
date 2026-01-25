@@ -12,10 +12,10 @@ services:
       TYPE: "FABRIC"
       TZ: "America/Toronto"
       CF_API_KEY_FILE: /run/secrets/cf_api_key
-      CURSEFORGE_FILES: |-
-        xaeros-minimap
-      MODRINTH_PROJECTS: |-
-        fabric-api
+      # CURSEFORGE_FILES: |-
+      #   xaeros-minimap
+      # MODRINTH_PROJECTS: |-
+      #   fabric-api
     secrets:
       - cf_api_key
     volumes:
