@@ -20,7 +20,7 @@ services:
     secrets:
       - cf_api_key
     volumes:
-      - "./data:/data"
+      - "/cusec-mc/data:/data"
 
 secrets:
   cf_api_key:
