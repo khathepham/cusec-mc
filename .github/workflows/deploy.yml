@@ -1,0 +1,22 @@
+
+on:
+  push:
+    branches: [ main ]
+    paths: 
+      - compose.yaml
+
+jobs:
+  deploy-webhook:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Call Deploy Webhook
+        id: deploy-api
+        uses: muhfaris/request-action@v1
+        with:
+          url: ${{ secrets.DEPLOYMENT_WEBHOOK }}
+          method: POST
+      
+      - name: Show API Response Status
+        run: |
+          echo "Response Status: ${{ steps.deploy-api.outputs.response-status }}"
