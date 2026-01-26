@@ -16,16 +16,14 @@ services:
       OPS: |-
         Marshmallows7920
       SPIGET_RESOURCES: |-
-        29999
-        9089
-        59773
-        60088
-        95132
-        28140
-      # CURSEFORGE_FILES: |-
-      #   xaeros-minimap
-      # MODRINTH_PROJECTS: |-
-      #   fabric-api
+        https://www.spigotmc.org/resources/stackmob-enhance-your-servers-performance.29999/
+        https://www.spigotmc.org/resources/chestsort-api.59773/
+        https://www.spigotmc.org/resources/harbor-a-sleep-enhancement-plugin.60088/
+        https://www.spigotmc.org/resources/vault.34315/
+        https://www.spigotmc.org/resources/graves.116202/
+        https://www.spigotmc.org/resources/luckperms.28140/
+      PLUGINS: |-
+        https://github.com/dmulloy2/ProtocolLib/releases/latest/download/ProtocolLib.jar  
     secrets:
       - cf_api_key
     volumes:
