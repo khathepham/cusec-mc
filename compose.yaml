@@ -16,11 +16,12 @@ services:
       OPS: |-
         Marshmallows7920
       SPIGET_RESOURCES: |- 
-        59773
-        60088
-        34315
-        116202
-        28140
+        59773,
+        60088,
+        34315,
+        116202,
+        28140,
+        29999
       PLUGINS: |-
         https://github.com/dmulloy2/ProtocolLib/releases/latest/download/ProtocolLib.jar  
     secrets:
