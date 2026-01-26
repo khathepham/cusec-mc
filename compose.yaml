@@ -16,12 +16,12 @@ services:
       OPS: |-
         Marshmallows7920
       SPIGET_RESOURCES: |-
-        https://www.spigotmc.org/resources/stackmob-enhance-your-servers-performance.29999/
-        https://www.spigotmc.org/resources/chestsort-api.59773/
-        https://www.spigotmc.org/resources/harbor-a-sleep-enhancement-plugin.60088/
-        https://www.spigotmc.org/resources/vault.34315/
-        https://www.spigotmc.org/resources/graves.116202/
-        https://www.spigotmc.org/resources/luckperms.28140/
+        29999 # https://www.spigotmc.org/resources/stackmob-enhance-your-servers-performance.29999/
+        59773 # https://www.spigotmc.org/resources/chestsort-api.59773/
+        60088 # https://www.spigotmc.org/resources/harbor-a-sleep-enhancement-plugin.60088/
+        34315 # Https://www.spigotmc.org/resources/vault.34315/
+        116202 # https://www.spigotmc.org/resources/graves.116202/
+        28140 # https://www.spigotmc.org/resources/luckperms.28140/
       PLUGINS: |-
         https://github.com/dmulloy2/ProtocolLib/releases/latest/download/ProtocolLib.jar  
     secrets:
