@@ -17,7 +17,7 @@ services:
       WORLD: "/worlds/cusec-mc-archive.zip"
       OPS: |
         Marshmallows7920
-        Calm661
+        Calm611
         Chopstx3
         VentisAurum
       SPIGET_RESOURCES: "\
