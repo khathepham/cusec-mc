@@ -15,7 +15,7 @@ services:
       CF_API_KEY_FILE: /run/secrets/cf_api_key
       VERSION: "1.21.11"
       WORLD: "/worlds/cusec-mc-archive.zip"
-      OPS: |-
+      OPS: |
         Marshmallows7920
         Calm661
         Chopstx3
