@@ -17,6 +17,9 @@ services:
       WORLD: "/worlds/cusec-mc-archive.zip"
       OPS: |-
         Marshmallows7920
+        Calm661
+        Chopstx3
+        VentisAurum
       SPIGET_RESOURCES: "\
         59773,\
         60088,\
@@ -34,6 +37,32 @@ services:
       - "/cusec-mc/plugins:/plugins"
       - "/cusec-mc/mods:/mods"
       - "/cusec-mc/worlds:/worlds"
+  restore-backup:
+    # Same image as mc, but any base image with bash and tar will work
+    image: itzg/mc-backup
+    restart: "no"
+    entrypoint: restore-tar-backup
+    volumes:
+      # Must be same mount as mc service, needs to be writable
+      - /cusec-mc/data:/data
+      # Must be same mount as backups service, but can be read-only
+      - /cusec-mc/backups:/backups:ro
+  backups:
+    image: itzg/mc-backup
+    depends_on:
+      mc:
+        condition: service_healthy
+    environment:
+      BACKUP_INTERVAL: "2h"
+      RCON_HOST: mc
+      # since this service waits for mc to be healthy, no initial delay is needed
+      INITIAL_DELAY: 0
+      PAUSE_IF_NO_PLAYERS: True
+      
+    volumes:
+      - /cusec-mc/data:/data:ro
+      - /cusec-mc/backups:/backups
+
 
 secrets:
   cf_api_key:
